@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    /> -->
 
     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
     <script type="tailwind-config">
@@ -42,6 +38,7 @@
       }
     </script>
     <script src="https://unpkg.com/vue@next"></script>
+    <link type="stylesheet" href="./style.css" />
     <style>
       /* Chrome, Safari, Edge, Opera */
       input::-webkit-outer-spin-button,
@@ -69,17 +66,17 @@
         2xl:bg-blue-700
       "
     >
-      <div class="flex p-10 dark:bg-gray-600 h-screen space-x-4">
-        <div class="flex-1 flex flex-col space-y-8">
+      <div class="flex px-10 py-5 dark:bg-gray-600 h-screen space-x-4">
+        <div class="flex-1 flex flex-col space-y-2">
           <div class="card bg-gray-200 rounded-xl shadow-md">
             <div class="card-header bg-gray-600 py-2 block w-full rounded-lg">
               <h1 class="text-center text-gray-200 font-bold">
                 TOTAL ACQUISITION COST ASSUMPTIONS
               </h1>
             </div>
-            <div class="card-body px-3 py-3 flex flex-col space-y-2">
+            <div class="card-body px-3 py-1.5 flex flex-col space-y-1">
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Purchase price</h2>
+                <h2 class="text-sm font-semibold">Purchase price</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -90,18 +87,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="acquisition_purchase_price"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Closing costs</h2>
+                <h2 class="text-sm font-semibold">Closing costs</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -112,18 +110,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="acquisition_closing_costs"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Home Inspection</h2>
+                <h2 class="text-sm font-semibold">Home Inspection</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -134,18 +133,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="acquisition_home_inspection"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">
+                <h2 class="text-sm font-semibold">
                   Furniture & Interiors Package
                 </h2>
                 <div class="flex items-center">
@@ -158,18 +158,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="acquisition_furniture_packages"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Rehab Work Estimates</h2>
+                <h2 class="text-sm font-semibold">Rehab Work Estimates</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -180,18 +181,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="acquisition_rehab_estimates"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Other Acquisition Costs</h2>
+                <h2 class="text-sm font-semibold">Other Acquisition Costs</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -202,11 +204,12 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="acquisition_other_costs"
                   />
@@ -238,9 +241,9 @@
                 PROJECTED INCOME ASSUMPTIONS
               </h1>
             </div>
-            <div class="card-body px-3 py-3 flex flex-col space-y-2">
+            <div class="card-body px-3 py-1.5 flex flex-col space-y-1">
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">
+                <h2 class="text-sm font-semibold">
                   Average Nightly Rent (ANR)
                 </h2>
                 <div class="flex items-center">
@@ -253,18 +256,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="projected_income_average_nightly"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Weekly Rent</h2>
+                <h2 class="text-sm font-semibold">Weekly Rent</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -275,11 +279,12 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     disabled
                     v-model="projected_income_weeklyRent"
@@ -287,7 +292,7 @@
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Potential Annual Rent</h2>
+                <h2 class="text-sm font-semibold">Potential Annual Rent</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -298,11 +303,12 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     disabled
                     v-model="projected_income_annualRent"
@@ -310,7 +316,7 @@
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Projected Occupancy Rate</h2>
+                <h2 class="text-sm font-semibold">Projected Occupancy Rate</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -321,18 +327,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="projected_income_occupancyRate"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Weeks Rented (of 52)</h2>
+                <h2 class="text-sm font-semibold">Weeks Rented (of 52)</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -343,11 +350,12 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     disabled
                     v-model="projected_income_weeks_rented"
@@ -355,7 +363,7 @@
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">
+                <h2 class="text-sm font-semibold">
                   Additional Net Revenue Streams
                 </h2>
                 <div class="flex items-center">
@@ -368,18 +376,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="projected_income_additional_revenue"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Annual Gross Revenue</h2>
+                <h2 class="text-sm font-semibold">Annual Gross Revenue</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -390,11 +399,12 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     disabled
                     v-model="projected_income_annual_gross_revenue"
@@ -422,16 +432,16 @@
             </div>
           </div>
         </div>
-        <div class="flex-1 flex flex-col space-y-8">
+        <div class="flex-1 flex flex-col space-y-5">
           <div class="card bg-gray-200 rounded-xl shadow-md">
             <div class="card-header bg-gray-600 py-2 block w-full rounded-lg">
               <h1 class="text-center text-gray-200 font-bold">
                 LOAN ASSUMPTIONS
               </h1>
             </div>
-            <div class="card-body px-3 py-3 flex flex-col space-y-2">
+            <div class="card-body px-3 py-1.5 flex flex-col space-y-1">
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Down Payment (%)</h2>
+                <h2 class="text-sm font-semibold">Down Payment (%)</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -442,18 +452,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="loan_down_payment_percent"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">
+                <h2 class="text-sm font-semibold">
                   Down Payment (Capital Investment)
                 </h2>
                 <div class="flex items-center">
@@ -466,11 +477,12 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     disabled
                     v-model="loan_capital_investment"
@@ -478,7 +490,7 @@
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Loan Amount</h2>
+                <h2 class="text-sm font-semibold">Loan Amount</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -489,11 +501,12 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     disabled
                     v-model="loan_amount"
@@ -501,7 +514,7 @@
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Interest Rate</h2>
+                <h2 class="text-sm font-semibold">Interest Rate</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -512,18 +525,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="loan_interest_rate"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">Amortization (Loan Years)</h2>
+                <h2 class="text-sm font-semibold">Amortization (Loan Years)</h2>
                 <div class="flex items-center">
                   <div
                     class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
@@ -534,18 +548,19 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     v-model="loan_amortization"
                   />
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">
+                <h2 class="text-sm font-semibold">
                   Monthly Payment (Principal & Interest)
                 </h2>
                 <div class="flex items-center">
@@ -558,11 +573,12 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     disabled
                     v-model="loan_monthly_payment"
@@ -570,7 +586,7 @@
                 </div>
               </div>
               <div class="flex flex-row justify-between items-center">
-                <h2 class="text-lg font-semibold">
+                <h2 class="text-sm font-semibold">
                   Annual Debt Service (Mortgage)
                 </h2>
                 <div class="flex items-center">
@@ -583,11 +599,12 @@
                     type="number"
                     placeholder="123"
                     class="
+                      rounded-tr-lg rounded-br-lg
                       border-none
                       bg-red-200
                       focus:outline-none
                       focus:bg-gray-100
-                      w-36
+                      w-28
                     "
                     disabled
                     v-model="loan_monthly_payment"
@@ -596,8 +613,1091 @@
               </div>
             </div>
           </div>
+          <div class="card bg-red-100 rounded-xl shadow-md">
+            <div class="card-header bg-gray-600 py-2 block w-full rounded-lg">
+              <h1 class="text-center text-gray-200 font-bold">
+                PROJECTED RETURN ON INVESTMENT CALCULATIONS
+              </h1>
+            </div>
+            <div class="card-body px-3 py-1.5 flex flex-col space-y-1">
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Average Monthly Cash Flow</h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="projected_return_monthly_cash_flow"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Annual Cash Flow</h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="projected_return_annual_cash_flow"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Cash-on-Cash Return (%)</h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>%</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="projected_return_cash_on_cash"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Annual Occupancy Rate to Break Even
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>%</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="projected_return_break_even"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Break Even Occupancy in Weeks
+                </h2>
+                <div class="flex items-center">
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                    disabled
+                    v-model="projected_return_break_even_occupancy_weeks"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Net Operating Income (NOI) incl Debt Service
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="projected_return_debt_service"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Cap Rate (ROI) STR Approach
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>%</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="projected_return_STR_approach"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Net Operating Income (NOI) excl Debt Service
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="projected_return_excl_debt_service"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Cap Rate (ROI) Traditional Approach
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>%</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="projected_return_traditional_approach"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex-1 dark:bg-gray-400"></div>
+        <div class="flex-1">
+          <div class="card bg-gray-200 rounded-xl shadow-md">
+            <div class="card-header bg-gray-600 py-2 block w-full rounded-lg">
+              <h1 class="text-center text-gray-200 font-bold">
+                ANNUAL VARIABLE EXPENSE ASSUMPTIONS
+              </h1>
+            </div>
+            <div class="card-body px-3 py-1.5 flex flex-col space-y-1">
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Management Rental Commission %
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>%</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_expense_rental_commission_percent"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Management Rental Commission $
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="annual_expense_rental_commission"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Credit Card Fee %</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_expense_cad_fee_percent"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Credit Card Fee $ Annualized
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_expense_cad_fee_annualized"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Cleaning Fee ($ per rented week)
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_expense_cleaning_fee_per_rented_week"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Cleaning Fee $ Annualized</h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="annual_expense_cleaning_fee_annualized"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Credit CardBooking Site Services Fee %
+                </h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_expense_cardBooking_service_fee_percent"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Booking Site Services Fee $ Annualized
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_expense_booking_site_service_fee_annualized"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Other Management Fees ($ per month)
+                </h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_expense_other_management_fee_per_month"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Other Management Fees Annualized
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_expense_other_management_fee_annualized"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Additional Nightly Insurance Fee ($/night)
+                </h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_expense_nightly_insurance_fee_per_night"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Additional Insurance Fee Annualized
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_expense_insurance_fee_annualized"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Sales, Tourist, other nightly taxes
+                </h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_expense_taxes"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Sales, Tourist, other nightly taxes Annualized
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_expense_taxes_annualized"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Other Variable Expenses Annualized
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_expense_other_variable_expenses_annualized"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Annualized Variable Expenses
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    disabled
+                    v-model="annual_expense_annualized_variable_expense"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                card-footer
+                px-5
+                py-3
+                bg-gray-600
+                rounded-tl-xl rounded-tr-xl rounded-bl-lg rounded-br-lg
+              "
+            >
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-lg font-semibold text-gray-200">
+                  Total Annual Expenses (Variable & Fixed)
+                </h2>
+                <h2 class="font-bold text-gray-200 text-xl tracking-wide">
+                  $ {{ annual_expense_total_expense ?
+                  annual_expense_total_expense : 0 }}
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 dark:bg-gray-400">
+          <div class="card bg-gray-200 rounded-xl shadow-md">
+            <div class="card-header bg-gray-600 py-2 block w-full rounded-lg">
+              <h1 class="text-center text-gray-200 font-bold">
+                ANNUAL FIXED EXPENSE ASSUMPTIONS
+              </h1>
+            </div>
+            <div class="card-body px-3 py-1.5 flex flex-col space-y-0.5">
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Annual Permits / Licenses</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_permit"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Advertising & Tech Costs</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_tech_costs"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Yard & Pest Control</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_yard_pest_control"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Pool Maintenance</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_pool_maintenance"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Electricity</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_electricity"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Water/Sewer</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_water"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Cable / Internet</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_internet"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Accounting</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_accounting"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="tbd" selected>TBD</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Property Taxes</h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_fixed_expense_taxes"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Homeowners Insurance</h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_homeowners_insurance"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Short Term Rental Insurance Riders
+                </h2>
+                <div class="flex items-center">
+                  <select
+                    v-model="annual_fixed_expense_short_term_insurance_riders"
+                    class="
+                      rounded-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-36
+                    "
+                  >
+                    <option value="included" selected>Included</option>
+                    <option value="not-included">Not Included</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  CDD Fee or other liability insurance
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_fixed_expense_liability_insurance"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Annual HOA Dues</h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_fixed_expense_HOA_dues"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Additional Membership Fees / VRBO
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_fixed_expense_membership_fees"
+                  />
+                </div>
+              </div>
+
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Maintenance Reserves / Other Supplies
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_fixed_expense_reservers"
+                  />
+                </div>
+              </div>
+
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Other FixedExpenses Annualized
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_fixed_expense_other_annualized"
+                  />
+                </div>
+              </div>
+
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">Bed Bug Program</h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_fixed_expense_bed_bug_program"
+                  />
+                </div>
+              </div>
+
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Lenders Lost Rents Insurance Rider Policy
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_fixed_expense_insurance_rider_policy"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-sm font-semibold">
+                  Monthly Maintenance Program
+                </h2>
+                <div class="flex items-center">
+                  <div
+                    class="px-3 py-2 bg-pink-300 rounded-tl-lg rounded-bl-lg"
+                  >
+                    <h2>$</h2>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="123"
+                    class="
+                      rounded-tr-lg rounded-br-lg
+                      border-none
+                      bg-red-200
+                      focus:outline-none
+                      focus:bg-gray-100
+                      w-28
+                    "
+                    v-model="annual_fixed_expense_monthly_maintenance_program"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                card-footer
+                px-5
+                py-3
+                bg-gray-600
+                rounded-tl-xl rounded-tr-xl rounded-bl-lg rounded-br-lg
+              "
+            >
+              <div class="flex flex-row justify-between items-center">
+                <h2 class="text-lg font-semibold text-gray-200">
+                  Annualized Fixed Expenses
+                </h2>
+                <h2 class="font-bold text-gray-200 text-xl tracking-wide">
+                  $ {{ annual_fixed_expense ? annual_fixed_expense : 0 }}
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./app.js"></script>
