@@ -280,20 +280,17 @@ const app = Vue.createApp({
     },
 
     projected_return_monthly_cash_flow() {
-      var value = Math.abs(
-        (parseFloat(this.projected_return_annual_cash_flow) / 12).toFixed(2)
-      );
+      var value = (
+        parseFloat(this.projected_return_annual_cash_flow) / 12
+      ).toFixed(2);
       return value;
     },
     projected_return_annual_cash_flow() {
-      var value = Math.abs(
-        (
-          this.projected_income_gross_rent -
-          this.annual_expense_total_expense -
-          this.loan_annual_mortgage
-        ).toFixed(2)
-      );
-
+      var value = (
+        this.projected_income_gross_rent -
+        this.annual_expense_total_expense -
+        this.loan_annual_mortgage
+      ).toFixed(2);
       return value;
     },
     projected_return_cash_on_cash() {
